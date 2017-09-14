@@ -14,13 +14,6 @@
     - build-essential
     - nodejs
 
-- name: Symlink to just "node"
-  file:
-    src=/usr/bin/nodejs
-    dest=/usr/bin/node
-    state=link
-  become: yes
-
 - name: Create npm global directory
   file:
     path: "{{ npm_prefix }}"
